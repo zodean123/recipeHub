@@ -84,7 +84,7 @@ const Footer = () => {
             whileHover={{ y: -4 }}
           >
             <a
-              href="https://github.com/Avinash905"
+              href="https://github.com/zodean123"
               aria-label="Follow me on github"
             >
               <AiFillGithub />
@@ -95,7 +95,7 @@ const Footer = () => {
             whileHover={{ y: -4 }}
           >
             <a
-              href="https://twitter.com/avinashdunna"
+              href="https://x.com/dkm7085"
               aria-label="Follow me on twitter"
             >
               <AiFillTwitterCircle />
@@ -106,7 +106,7 @@ const Footer = () => {
             whileHover={{ y: -4 }}
           >
             <a
-              href="https://www.linkedin.com/in/dunna-avinash"
+              href="https://www.linkedin.com/in/dipan-mallick-25b28a242/"
               aria-label="Follow me on linkedin"
             >
               <AiFillLinkedin />

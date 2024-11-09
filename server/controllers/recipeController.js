@@ -84,8 +84,10 @@ const updateRecipe = async (req, res, next) => {
     if (!foundRecipe)
       return res.status(404).json({ message: "Recipe not found" });
 
-    if (foundRecipe.author !== req.user)
+    if (foundRecipe.author.toString() !== req.user.toString()) {
+      console.log(foundRecipe.author, typeof req.user);
       return res.status(401).json({ message: "Unauthorized" });
+    }
 
     foundRecipe.title = title;
     foundRecipe.description = description;
@@ -137,7 +139,7 @@ const deleteRecipe = async (req, res, next) => {
     if (!foundRecipe)
       return res.status(404).json({ message: "Recipe not found" });
 
-    if (foundRecipe.author !== req.user)
+    if (foundRecipe.author.toString() !== req.user.toString())
       return res.status(401).json({ message: "Unauthorized" });
 
     await foundRecipe.deleteOne({ _id: req.params.id });
